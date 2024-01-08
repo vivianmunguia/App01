@@ -6,4 +6,16 @@
 string nombre = "Vivian Munguía";
 var url = "www.vivianmunguia.com";
 
+int miNumeroEntero = 100;
+int otroNumeroEntero = -500;
+
+float miNumeroFloat = 62.36f;
+double miNumeroDouble = 96.25;
+decimal miNumeroDecimal = 487.567m;
+
+byte miNumeroByte = 230;
+bool statusProducto = false;
+string miCadena = "Esta es mi cadena de texto";
+char miCaracter = 'A';
+
 Console.WriteLine("Hola alumnos del curso de C# " + nombre + " url: " + url);
