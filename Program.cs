@@ -20,4 +20,10 @@ char miCaracter = 'A';
 
 const int miConstanteNumerica = 500;
 
+string cuentaBancaria = "100500";
+
+bool? miVariablenull = null; //El ? es necesario para poder declarar como null
+int? miNumeronull = null;//El ? es necesario para poder declarar como null
+string miCadenanull = null;
+
 Console.WriteLine("Hola alumnos del curso de C# " + nombre + " url: " + url);
