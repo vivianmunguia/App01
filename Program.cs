@@ -18,4 +18,6 @@ bool statusProducto = false;
 string miCadena = "Esta es mi cadena de texto";
 char miCaracter = 'A';
 
+const int miConstanteNumerica = 500;
+
 Console.WriteLine("Hola alumnos del curso de C# " + nombre + " url: " + url);

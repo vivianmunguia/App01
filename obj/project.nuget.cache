@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "BU1GfBoxc63wR/qEx3SHJxkRlyRqibGzjEv0OnXk3ysTQgAYJ5lVktwOOYL+BeUQtPmzctI8/hSE60gmsFVQRA==",
+  "dgSpecHash": "dabtDE06ciV2O5XKAeApxb1cokxabOTKGpUDBWtWPIiZ1urTg41kpw/x7l2UpQHp/u7Dm+zMPXYk/0BLruyJfA==",
   "success": true,
   "projectFilePath": "C:\\Users\\andy_\\Documents\\Cursos\\ASP.NET\\ASP.NET Core MVC and C# Bootcamp - Desde las Bases a Expert\\App01\\App01.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\andy_\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\andy_\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\andy_\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\andy_\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
   "logs": []
 }
