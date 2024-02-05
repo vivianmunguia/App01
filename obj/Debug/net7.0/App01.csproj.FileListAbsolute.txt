@@ -12,3 +12,4 @@ C:\Users\andy_\Documents\Cursos\ASP.NET\ASP.NET Core MVC and C# Bootcamp - Desde
 C:\Users\andy_\Documents\Cursos\ASP.NET\ASP.NET Core MVC and C# Bootcamp - Desde las Bases a Expert\App01\obj\Debug\net7.0\App01.pdb
 C:\Users\andy_\Documents\Cursos\ASP.NET\ASP.NET Core MVC and C# Bootcamp - Desde las Bases a Expert\App01\obj\Debug\net7.0\App01.genruntimeconfig.cache
 C:\Users\andy_\Documents\Cursos\ASP.NET\ASP.NET Core MVC and C# Bootcamp - Desde las Bases a Expert\App01\obj\Debug\net7.0\ref\App01.dll
+C:\Users\andy_\Documents\Cursos\ASP.NET\ASP.NET Core MVC and C# Bootcamp - Desde las Bases a Expert\App01\obj\Debug\net7.0\App01.sourcelink.json
