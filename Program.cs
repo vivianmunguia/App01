@@ -3,9 +3,10 @@
 
     1. El cliente ingresa un número x
     2. El cliente ingresa un segundo número y
-    3. El programa captura estos valores y los almacena en variables
-    4. El programa se encarga de realizar la operación matemática 
-    5. El programa se encarga de imprimir el resultado de la operación
+    3. El cliente ingresa el tipo de operación a realizar que puede ser suma, resta, multiplicación o división
+    4. El programa captura estos valores y los almacena en variables
+    5. El programa se encarga de realizar la operación matemática 
+    6. El programa se encarga de imprimir el resultado de la operación
  */
 Console.WriteLine("Por favor ingrese su primer número");
 var primerNumeroString = Console.ReadLine();
@@ -36,6 +37,28 @@ if (!int.TryParse(primerNumeroString, out primerNumeroInt))
 {
     Console.WriteLine("El valor ingresado no es un número");
     return;
+}
+
+if (primerNumeroInt >= 100)
+{
+    Console.WriteLine("Su número es mayor igual que 100");
+}
+else
+{
+    Console.WriteLine("Su número es menor que 100");
+}
+
+if (primerNumeroInt <= 10)
+{
+    Console.WriteLine("Es menor igual que 10");
+}
+else if (primerNumeroInt > 10 && primerNumeroInt <= 20)
+{
+    Console.WriteLine("Es mayor que 10 y menor igual que 20");
+}
+else
+{
+    Console.WriteLine("El número es mayor que 20");
 }
 
 //var primerNumeroInt = int.Parse(primerNumeroString!);
