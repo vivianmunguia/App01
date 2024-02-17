@@ -8,6 +8,9 @@
     5. El programa se encarga de realizar la operación matemática 
     6. El programa se encarga de imprimir el resultado de la operación
  */
+using System.Security.Principal;
+using System.Xml.Schema;
+
 Console.WriteLine("Por favor ingrese su primer número");
 var primerNumeroString = Console.ReadLine();
 
@@ -28,7 +31,7 @@ if (string.IsNullOrEmpty(primerNumeroString))
     1. Declarar una variable para el resultado posible
     2. Condicionar si el texto está realtemente escrito en una nomenclatura numérica
     3. En caso de que no sea un número, entonces termina el programa
-    4. En caso de que sí sea un número, entonces continúa la ejecución del programa
+    4. En caso de que sí sea un número, Switch case was usedentonces continúa la ejecución del programa
  */
 
 int primerNumeroInt = 0;
@@ -63,28 +66,46 @@ else
 
 //var primerNumeroInt = int.Parse(primerNumeroString!);
 
-Console.WriteLine("Por favor ingrese su segundo número");
+Console.WriteLine("Por favor ingrese el segundo número");
 var segundoNumeroString = Console.ReadLine();
-var segundoNumeroInt = int.Parse(segundoNumeroString!);
 
-//var resultadoSuma = primerNumeroInt + segundoNumeroInt;
-var resultadoSuma = primerNumeroInt;
-resultadoSuma += segundoNumeroInt;
-Console.WriteLine("El resultado de la suma es: " + resultadoSuma);
+if (string.IsNullOrEmpty(segundoNumeroString))
+{
+    Console.WriteLine("El segundo número está en blanco o es nulo");
+    return;
+}
 
-//var resultadoResta = primerNumeroInt - segundoNumeroInt;
-var resultadoResta = primerNumeroInt;
-resultadoResta -= segundoNumeroInt;
-Console.WriteLine("El resultado de la resta es: " + resultadoResta);
+var segundoNumeroInt = 0;
 
-//var resultadoMultiplicacion = primerNumeroInt * segundoNumeroInt;
-var resultadoMultiplicacion = primerNumeroInt;
-resultadoMultiplicacion *= segundoNumeroInt;
-Console.WriteLine($"El resultado de la multiplicación es: {resultadoMultiplicacion}");
+if (!int.TryParse(segundoNumeroString, out segundoNumeroInt))
+{
+    Console.WriteLine("El valor ingresado no es un número");
+    return;
+}
 
-//var resultadoDivision = primerNumeroInt / segundoNumeroInt;
-var resultadoDivision = primerNumeroInt;
-resultadoDivision /= segundoNumeroInt;
-Console.WriteLine($"El resultado de la división es: {resultadoDivision}");
+Console.WriteLine("Selecciona: 1) Suma, 2) Resta, 3) Multiplicación, 4) División");
+int tipoOperacion = int.TryParse(Console.ReadLine(), out tipoOperacion) ? tipoOperacion : 0;
 
-var miVariable = 500;
+var total = 0;
+switch (tipoOperacion)
+{
+    case 1:
+        total = primerNumeroInt + segundoNumeroInt;
+        Console.WriteLine($"{primerNumeroInt} + {segundoNumeroInt} = {total}");
+        break;
+    case 2:
+        total = primerNumeroInt - segundoNumeroInt;
+        Console.WriteLine($"{primerNumeroInt} - {segundoNumeroInt} = {total}");
+        break;
+    case 3:
+        total = primerNumeroInt * segundoNumeroInt;
+        Console.WriteLine($"{primerNumeroInt} * {segundoNumeroInt} = {total}");
+        break;
+    case 4:
+        total = primerNumeroInt / segundoNumeroInt;
+        Console.WriteLine($"{primerNumeroInt} / {segundoNumeroInt} = {total}");
+        break;
+    default:
+        Console.WriteLine("Ingresó un valor erróneo, debe ingresar un número del 1 al 4");
+        return;
+}
