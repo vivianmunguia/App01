@@ -1,12 +1,15 @@
-﻿//1. El usuario ingresa un numero
-//2. El programa captura el numero e imprime una lista de numeros superiores hasta el maximo de 100
-//Regla: El numero ingresado por el usuario no debe ser mayor o igual que 100
+﻿//1. El usuario ingresa n veces numeros a sumarse
+//2. Si el usuario ingresa un numero = 0 entonces se debe detener la suma 
+//3. Imprime el total de la suma, de los numeros ingresados
 
-Console.WriteLine("Ingrese un número menor que 100");
-int numero = int.Parse(Console.ReadLine()!);
+int acumulador = 0;
+int numero = 0;
 
-while (numero <= 100)
+do
 {
-    Console.WriteLine(numero);
-    numero++;
-}
+    Console.WriteLine("Ingrese el número a sumar: ");
+    numero = int.Parse(Console.ReadLine()!);
+    acumulador += numero;
+} while (numero != 0);
+
+Console.WriteLine($"El total de la suma es: {acumulador}");
