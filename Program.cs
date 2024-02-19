@@ -1,17 +1,12 @@
-﻿//Bucle para imprimir 80 veces el texto: Bienvenido al curso de C# avanzado
-for (int i = 1; i <= 80; i++)
-{
-    Console.WriteLine("Bienvenido al curso de C# avanzado");
-}
+﻿//1. El usuario ingresa un numero
+//2. El programa captura el numero e imprime una lista de numeros superiores hasta el maximo de 100
+//Regla: El numero ingresado por el usuario no debe ser mayor o igual que 100
 
-// 1. El usuario ingresa un número en la consola
-// 2. El programa multiplica por los primeros 10 numeros a este numero ingresado
-// 3. Se debe imprimir el resultado de cada operacion
-Console.WriteLine("Ingrese un número a multiplicar 10 veces");
-var numeroParaMultiplicar = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Ingrese un número menor que 100");
+int numero = int.Parse(Console.ReadLine()!);
 
-for (int i = 1; i <= 10; i++)
+while (numero <= 100)
 {
-    int resultado = i * numeroParaMultiplicar;
-    Console.WriteLine($"{i} x {numeroParaMultiplicar} = {resultado}");
+    Console.WriteLine(numero);
+    numero++;
 }
