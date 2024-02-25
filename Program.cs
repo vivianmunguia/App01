@@ -8,8 +8,19 @@ int numero = 0;
 do
 {
     Console.WriteLine("Ingrese el número a sumar: ");
-    numero = int.Parse(Console.ReadLine()!);
+
+    try
+    {
+        numero = int.Parse(Console.ReadLine()!);
+    }
+    catch (System.FormatException e)
+    {
+        Console.WriteLine($"El error tiene este detalle: {e}");
+        continue;
+    }
+    
     acumulador += numero;
+
 } while (numero != 0);
 
 Console.WriteLine($"El total de la suma es: {acumulador}");
