@@ -2,17 +2,15 @@
 //2. En el bucle se generara un numero aleatorio entre 1 y 1000
 //3. Imprimir dentro del bucle este numero aleatorio previamente generado
 
-ImprimirNumeroAleatorio();
+ImprimirNumeroAleatorio(10, "Bienvenido aleatorio");
 
-void ImprimirNumeroAleatorio()
+void ImprimirNumeroAleatorio(int numeroRango, string mensaje)
 {
-	Console.WriteLine("Ingrese el número de veces a generar aleatorios:");
-    var numeroRango = int.Parse(Console.ReadLine()!);
 	var random = new Random();
 
 	for (int i = 1; i <= numeroRango; i++)
 	{
 		var numeroAleatorio = random.Next(1, 100);
-		Console.WriteLine($"El número aleatorio generado es {numeroAleatorio}");
+		Console.WriteLine($"{mensaje} {numeroAleatorio}");
 	}
 }
