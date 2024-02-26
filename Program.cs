@@ -1,16 +1,13 @@
-﻿//1. El usuario ingresa el numero que representa cuantas veces se generara este valor aleatorio
-//2. En el bucle se generara un numero aleatorio entre 1 y 1000
-//3. Imprimir dentro del bucle este numero aleatorio previamente generado
+﻿//Objetivo: Calcular el sueldo total de un empleado
+//1. El metodo recibe los valores de salario, impuesto, salud
+//2. Calcula el total que debe recibir de salario en funcion a estos parametros
+//3. El metodo debe devolver el salario total
 
-ImprimirNumeroAleatorio(mensaje: "Este es mi mensaje", numeroRango: 50);
+int salarioTotal = 0;
+CalcularSalarioTotal(salario: 1000, impuesto: 400, salud: 100, out salarioTotal);
+Console.WriteLine($"El salario total es {salarioTotal}");
 
-void ImprimirNumeroAleatorio(int numeroRango = 2, string mensaje = "Hola valor por defecto")
+void CalcularSalarioTotal(int salario, int impuesto, int salud, out int total)
 {
-	var random = new Random();
-
-	for (int i = 1; i <= numeroRango; i++)
-	{
-		var numeroAleatorio = random.Next(1, 100);
-		Console.WriteLine($"{mensaje} {numeroAleatorio}");
-	}
+    total = salario - impuesto - salud;
 }
