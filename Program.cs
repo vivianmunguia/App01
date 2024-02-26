@@ -1,30 +1,18 @@
-﻿//1. El usuario ingresa n veces numeros a sumarse
-//2. Si el usuario ingresa un numero = 0 entonces se debe detener la suma 
-//3. Imprime el total de la suma, de los numeros ingresados
+﻿//1. El usuario ingresa el numero que representa cuantas veces se generara este valor aleatorio
+//2. En el bucle se generara un numero aleatorio entre 1 y 1000
+//3. Imprimir dentro del bucle este numero aleatorio previamente generado
 
-int acumulador = 0;
-int numero = 0;
+ImprimirNumeroAleatorio();
 
-do
+void ImprimirNumeroAleatorio()
 {
-    Console.WriteLine("Ingrese el número a sumar: ");
+	Console.WriteLine("Ingrese el número de veces a generar aleatorios:");
+    var numeroRango = int.Parse(Console.ReadLine()!);
+	var random = new Random();
 
-    try
-    {
-        numero = int.Parse(Console.ReadLine()!);
-    }
-    catch (System.FormatException e)
-    {
-        Console.WriteLine($"El error tiene este detalle: {e.Message}");
-        if (e.Message is null)
-        {
-            throw;
-        }
-        continue;
-    }
-    
-    acumulador += numero;
-
-} while (numero != 0);
-
-Console.WriteLine($"El total de la suma es: {acumulador}");
+	for (int i = 1; i <= numeroRango; i++)
+	{
+		var numeroAleatorio = random.Next(1, 100);
+		Console.WriteLine($"El número aleatorio generado es {numeroAleatorio}");
+	}
+}
