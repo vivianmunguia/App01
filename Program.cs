@@ -2,9 +2,7 @@
 //2. En el bucle se generara un numero aleatorio entre 1 y 1000
 //3. Imprimir dentro del bucle este numero aleatorio previamente generado
 
-//ImprimirNumeroAleatorio(10, "Este sí es mi parámetro");
-//ImprimirNumeroAleatorio(10);
-ImprimirNumeroAleatorio();
+ImprimirNumeroAleatorio(mensaje: "Este es mi mensaje", numeroRango: 50);
 
 void ImprimirNumeroAleatorio(int numeroRango = 2, string mensaje = "Hola valor por defecto")
 {
