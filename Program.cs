@@ -15,7 +15,11 @@ do
     }
     catch (System.FormatException e)
     {
-        Console.WriteLine($"El error tiene este detalle: {e}");
+        Console.WriteLine($"El error tiene este detalle: {e.Message}");
+        if (e.Message is null)
+        {
+            throw;
+        }
         continue;
     }
     
