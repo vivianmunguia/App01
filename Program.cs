@@ -1,15 +1,25 @@
-﻿
-(int a, string b, bool c) miTupla2 = (20, "Vaxi Drez", false);
-var miTupla = (20, "Vaxi Drez", false);
+﻿// Objetivo: Registrar un nuevo producto en una tienda
+// 1. El usuario ingresa la data del producto como: nombre, precio, stock
+// 2. El programa va a capturar la data y procedera a poner un precio de venta que incluya el costo del impuesto del producto
+// 3. El metodo de registro de producto debe devolver la data del producto
+// 4. El programa debe imprimir la data del producto registrado
 
-miTupla.Item1 = 100;
-var miTuplaValorItem1 = miTupla.Item1;
-Console.WriteLine($"Imprime mi primer valor de tupla {miTuplaValorItem1}");
+Console.WriteLine("Ingrese el nombre del producto");
+var nombreProducto = Console.ReadLine();
 
-miTupla.Item2 = "Curso C#";
-var miTuplaValorItem2 = miTupla.Item2;
-Console.WriteLine($"Imprime mi segundo valor de tupla {miTuplaValorItem2}");
+Console.WriteLine("Ingrese el precio del producto");
+var precioProducto = int.Parse(Console.ReadLine());
 
-miTupla.Item3 = true;
-var miTuplaValor3 = miTupla.Item3;
-Console.WriteLine($"Imprime mi tercer valor de tupla {miTuplaValor3}");
+Console.WriteLine("Ingrese el stock del producto");
+var stockProducto = int.Parse(Console.ReadLine()!);
+
+(double, int, string) GetProducto (string nombreProducto, int precioProducto, int stock)
+{
+    var precioFinal = precioProducto + precioProducto * 0.2;
+
+    return (precioFinal, stock, nombreProducto);
+}
+
+var tupla = GetProducto(nombreProducto!, precioProducto, stockProducto);
+
+Console.WriteLine($"Datos del producto {tupla.Item3} \n Precio final: {tupla.Item1} \n Stock: {tupla.Item2}");
