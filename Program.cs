@@ -1,25 +1,10 @@
-﻿// Objetivo: Registrar un nuevo producto en una tienda
-// 1. El usuario ingresa la data del producto como: nombre, precio, stock
-// 2. El programa va a capturar la data y procedera a poner un precio de venta que incluya el costo del impuesto del producto
-// 3. El metodo de registro de producto debe devolver la data del producto
-// 4. El programa debe imprimir la data del producto registrado
+﻿using App01;
 
-Console.WriteLine("Ingrese el nombre del producto");
-var nombreProducto = Console.ReadLine();
+Libro donQuijote = new Libro("Don Quijote de la Mancha", "Miguel de Cervantes", 5000);
+Libro harryPotter = new Libro("Harry Potter", "J.K Rowling", 3000);
 
-Console.WriteLine("Ingrese el precio del producto");
-var precioProducto = int.Parse(Console.ReadLine());
+var resultado = donQuijote.GetDescripcion();
+var resultado2 = harryPotter.GetDescripcion();
 
-Console.WriteLine("Ingrese el stock del producto");
-var stockProducto = int.Parse(Console.ReadLine()!);
-
-(double, int, string) GetProducto (string nombreProducto, int precioProducto, int stock)
-{
-    var precioFinal = precioProducto + precioProducto * 0.2;
-
-    return (precioFinal, stock, nombreProducto);
-}
-
-var tupla = GetProducto(nombreProducto!, precioProducto, stockProducto);
-
-Console.WriteLine($"Datos del producto {tupla.Item3} \n Precio final: {tupla.Item1} \n Stock: {tupla.Item2}");
+Console.WriteLine(resultado);
+Console.WriteLine(resultado2);
