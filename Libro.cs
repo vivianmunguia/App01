@@ -8,9 +8,9 @@ namespace App01
 {
     public class Libro
     {
-        string _nombre;
-        string _autor;
-        int _cantidadPaginas;
+        public string _nombre;
+        protected string _autor;
+        private int _cantidadPaginas;
 
         public Libro(string nombre, string autor, int cantidadPaginas)
         {
@@ -21,7 +21,36 @@ namespace App01
 
         public string GetDescripcion()
         {
-            return $"{_nombre} por {_autor}";
+            return $"{_nombre} por {_autor}, cantidad {_cantidadPaginas}";
+        }
+
+        public string GetNombre()
+        {
+            return _nombre;
+        }
+
+        public void SetNombre(string nombreLibro)
+        {
+            _nombre = nombreLibro;
+        }
+
+        public string GetAutor()
+        {
+            return _autor;
+        }
+
+        public void SetAutor(string autorNuevo)
+        {
+            _autor = autorNuevo;
+        }
+
+        public int GetCantidadPaginas() {
+            return _cantidadPaginas;
+        }
+
+        public void SetCantidadPaginas(int nuevaCantidadPaginas)
+        {
+            _cantidadPaginas = nuevaCantidadPaginas;
         }
     }
 }
