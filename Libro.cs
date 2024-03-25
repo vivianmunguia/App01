@@ -8,9 +8,36 @@ namespace App01
 {
     public class Libro
     {
-        public string _nombre;
-        protected string _autor;
+        private string _nombre;
+
+        public string Nombre
+        {
+            get
+            {
+                return _nombre;
+            }
+            set
+            {
+                _nombre = value;
+            }
+        }
+
+        private string _autor;
+        public string Autor
+        {
+            get => _autor;
+            set => _autor = value;
+        }
+
         private int _cantidadPaginas;
+        public int CantidadPaginas
+        {
+            get => _cantidadPaginas;
+            set => _cantidadPaginas = value;
+        }
+
+        //Ejemplo de la vida real
+        public string MiPropiedad { get; set; }
 
         public Libro(string nombre, string autor, int cantidadPaginas)
         {
@@ -19,38 +46,9 @@ namespace App01
             _cantidadPaginas = cantidadPaginas;
         }
 
-        public string GetDescripcion()
-        {
-            return $"{_nombre} por {_autor}, cantidad {_cantidadPaginas}";
-        }
-
-        public string GetNombre()
-        {
-            return _nombre;
-        }
-
-        public void SetNombre(string nombreLibro)
-        {
-            _nombre = nombreLibro;
-        }
-
-        public string GetAutor()
-        {
-            return _autor;
-        }
-
-        public void SetAutor(string autorNuevo)
-        {
-            _autor = autorNuevo;
-        }
-
-        public int GetCantidadPaginas() {
-            return _cantidadPaginas;
-        }
-
-        public void SetCantidadPaginas(int nuevaCantidadPaginas)
-        {
-            _cantidadPaginas = nuevaCantidadPaginas;
-        }
+        public string GetDescripcion() => $"{Nombre} escrito por {Autor}, paginas {CantidadPaginas}";
+        //{
+        //    return $"{_nombre} por {_autor}, cantidad {_cantidadPaginas}";
+        //}
     }
 }
