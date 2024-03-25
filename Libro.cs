@@ -6,22 +6,8 @@ using System.Threading.Tasks;
 
 namespace App01
 {
-    public class Libro
+    public class Libro : Publicacion
     {
-        private string _nombre;
-
-        public string Nombre
-        {
-            get
-            {
-                return _nombre;
-            }
-            set
-            {
-                _nombre = value;
-            }
-        }
-
         private string _autor;
         public string Autor
         {
@@ -29,26 +15,13 @@ namespace App01
             set => _autor = value;
         }
 
-        private int _cantidadPaginas;
-        public int CantidadPaginas
+        public Libro(string nombre, string autor, int cantidadPaginas, decimal precio) 
+            : base(nombre, precio, cantidadPaginas)
         {
-            get => _cantidadPaginas;
-            set => _cantidadPaginas = value;
-        }
-
-        //Ejemplo de la vida real
-        public string MiPropiedad { get; set; }
-
-        public Libro(string nombre, string autor, int cantidadPaginas)
-        {
-            _nombre = nombre;
             _autor = autor;
-            _cantidadPaginas = cantidadPaginas;
         }
 
-        public string GetDescripcion() => $"{Nombre} escrito por {Autor}, paginas {CantidadPaginas}";
-        //{
-        //    return $"{_nombre} por {_autor}, cantidad {_cantidadPaginas}";
-        //}
+        public override string GetDescripcion() 
+            => $"Libro {Nombre} escrito por {Autor}, paginas {NumeroPaginas}";
     }
 }
